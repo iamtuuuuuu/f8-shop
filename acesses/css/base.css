@@ -3,6 +3,11 @@
     --white-color: #fff;
     --black-color: #000;
     --text-color: #333;
+    --border-color: #dbdbdb;
+
+    --navbar-height: 34px;
+    --header-height: 120px;
+    --header-with-search-height: calc(var(--header-height) - var(--navbar-height));
 }
 
 * {
@@ -50,6 +55,16 @@ html {
     left: 0;
     bottom: 0;
     display: flex;
+    animation: fadeIn linear .1s;
+}
+
+@keyframes growth {
+    from {
+        transform: scale(var(--growth-from));
+    }
+    to {
+        transform: scale(var(--growth-to));
+    }
 }
 
 .modal__overlay {
@@ -60,9 +75,42 @@ html {
 }
 
 .modal__body {
+    --growth-from: 0.7;
+    --growth-to: 1;
     margin: auto;
-    background-color: var(--white-color);
     z-index: 1;
-    border-radius: 5px;
+    animation: growth linear .1s;
 }
+
+/* btn style */
+
+.btn {
+    min-width: 142px;
+    height: 34px;
+    text-decoration: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 1.5rem;
+    padding: 0;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 1.6rem;
+}
+
+
+
+.btn.btn--primary {
+    color: var(--white-color);
+    background-color: var(--primary-color); 
+}
+
+/* .btn.btn--disable {
+    cursor: default;
+    background-color: #999;
+    color: #ccc;
+} */
 
