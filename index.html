@@ -7,6 +7,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" />
         <link rel="stylesheet" href="./acesses/css/base.css">
         <link rel="stylesheet" href="./acesses/css/main.css">
+        <link rel="stylesheet" href="./acesses/css/grid.css">
+        <link rel="stylesheet" href="./acesses/css/responsive.css">
         <link rel="preconnect" href="https://fonts.gstatic.com">
         <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="./acesses/css/fonts/fontawesome-free-5.15.1/css/all.min.css">
@@ -14,8 +16,8 @@
     <body>
         <div class="app">
             <header class="header">
-                <div class="grid">
-                    <nav class="header__navbar">
+                <div class="grid wide">
+                    <nav class="header__navbar hide-on-mobile-tablet">
                         <ul class="header__navlist-list">
                             <li class="header__navbar-item header__navbar-item--separate">
                                 Kênh Người Bán
@@ -133,7 +135,10 @@
 
                     <!-- Header with search -->
                     <div class="header-with-search">
-                        <div class="header__logo">
+                        <label for="mobile-search-checkbox" class="header__mobile-search">
+                            <i class="header__mobile-search-icon fas fa-search"></i>
+                        </label>
+                        <div class="header__logo hide-on-tablet">
                             <a href="/" class="header__logo-link">
                                 <svg viewBox="0 0 192 65" class="header__logo-img">
                                     <g fill-rule="evenodd">
@@ -143,6 +148,7 @@
                             </a>
                         </div>
 
+                        <input type="checkbox" hidden name="" id="mobile-search-checkbox" class="header__search-checkbox">
                         <div class="header__search">
                             <div class="header__search-input-wrap">
                                 <input type="text" class="header__search-input" placeholder="Tìm kiếm sản phẩm"></input>
@@ -180,6 +186,108 @@
                                         <h4 class="header__cart-heading">Sản phẩm đã thêm</h4>
                                         <ul class="header__cart-list-item">
                                             <!-- cart -item -->
+                                            <li class="header__cart-item">
+                                                <img src="https://img.abaha.vn/photos/resized/320x/83-1586781803-myphamohui-lgvina.png" alt="" class="header__cart-img">
+                                                <div class="header__cart-item-info">
+                                                    <div class="header__cart-item-head">
+                                                        <h5 class="header__cart-item-name">Son Lì Nhẹ Môi Dưỡng Môi Maybelline New York Color Sensational The Creamy Mattes Lipstick 3.9g</h5>
+                                                        <div class="header__cart-item-price-wrap">                                                            
+                                                            <span class="header__cart-item-price">2.000.000đ</span>
+                                                            <span class="header__cart-item-multiply">x</span>
+                                                            <span class="header__cart-item-quantity">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="header__cart-item-body">
+                                                        <span class="header__cart-item-description">Phân loại: Bạc</span>
+                                                        <span class="header__cart-item-remove">Xóa</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="header__cart-item">
+                                                <img src="https://img.abaha.vn/photos/resized/320x/83-1586781803-myphamohui-lgvina.png" alt="" class="header__cart-img">
+                                                <div class="header__cart-item-info">
+                                                    <div class="header__cart-item-head">
+                                                        <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                                        <div class="header__cart-item-price-wrap">                                                            
+                                                            <span class="header__cart-item-price">2.000.000đ</span>
+                                                            <span class="header__cart-item-multiply">x</span>
+                                                            <span class="header__cart-item-quantity">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="header__cart-item-body">
+                                                        <span class="header__cart-item-description">Phân loại: Bạc</span>
+                                                        <span class="header__cart-item-remove">Xóa</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="header__cart-item">
+                                                <img src="https://img.abaha.vn/photos/resized/320x/83-1586781803-myphamohui-lgvina.png" alt="" class="header__cart-img">
+                                                <div class="header__cart-item-info">
+                                                    <div class="header__cart-item-head">
+                                                        <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                                        <div class="header__cart-item-price-wrap">                                                            
+                                                            <span class="header__cart-item-price">2.000.000đ</span>
+                                                            <span class="header__cart-item-multiply">x</span>
+                                                            <span class="header__cart-item-quantity">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="header__cart-item-body">
+                                                        <span class="header__cart-item-description">Phân loại: Bạc</span>
+                                                        <span class="header__cart-item-remove">Xóa</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="header__cart-item">
+                                                <img src="https://img.abaha.vn/photos/resized/320x/83-1586781803-myphamohui-lgvina.png" alt="" class="header__cart-img">
+                                                <div class="header__cart-item-info">
+                                                    <div class="header__cart-item-head">
+                                                        <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                                        <div class="header__cart-item-price-wrap">                                                            
+                                                            <span class="header__cart-item-price">2.000.000đ</span>
+                                                            <span class="header__cart-item-multiply">x</span>
+                                                            <span class="header__cart-item-quantity">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="header__cart-item-body">
+                                                        <span class="header__cart-item-description">Phân loại: Bạc</span>
+                                                        <span class="header__cart-item-remove">Xóa</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="header__cart-item">
+                                                <img src="https://img.abaha.vn/photos/resized/320x/83-1586781803-myphamohui-lgvina.png" alt="" class="header__cart-img">
+                                                <div class="header__cart-item-info">
+                                                    <div class="header__cart-item-head">
+                                                        <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                                        <div class="header__cart-item-price-wrap">                                                            
+                                                            <span class="header__cart-item-price">2.000.000đ</span>
+                                                            <span class="header__cart-item-multiply">x</span>
+                                                            <span class="header__cart-item-quantity">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="header__cart-item-body">
+                                                        <span class="header__cart-item-description">Phân loại: Bạc</span>
+                                                        <span class="header__cart-item-remove">Xóa</span>
+                                                    </div>
+                                                </div>
+                                            </li>
+                                            <li class="header__cart-item">
+                                                <img src="https://img.abaha.vn/photos/resized/320x/83-1586781803-myphamohui-lgvina.png" alt="" class="header__cart-img">
+                                                <div class="header__cart-item-info">
+                                                    <div class="header__cart-item-head">
+                                                        <h5 class="header__cart-item-name">Bộ kem đặc trị vùng mắt</h5>
+                                                        <div class="header__cart-item-price-wrap">                                                            
+                                                            <span class="header__cart-item-price">2.000.000đ</span>
+                                                            <span class="header__cart-item-multiply">x</span>
+                                                            <span class="header__cart-item-quantity">2</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="header__cart-item-body">
+                                                        <span class="header__cart-item-description">Phân loại: Bạc</span>
+                                                        <span class="header__cart-item-remove">Xóa</span>
+                                                    </div>
+                                                </div>
+                                            </li>
                                             <li class="header__cart-item">
                                                 <img src="https://img.abaha.vn/photos/resized/320x/83-1586781803-myphamohui-lgvina.png" alt="" class="header__cart-img">
                                                 <div class="header__cart-item-info">
@@ -239,16 +347,34 @@
                             
                         </div>
                     </div>
-                </div>   
+                </div>
+                
+                <ul class="header__sort-bar">
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-list">Liên quan</a>
+                    </li>
+
+                    <li class="header__sort-item header__sort-item--active">
+                        <a href="" class="header__sort-list ">Mới nhất</a>
+                    </li>
+
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-list">Bán chạy</a>
+                    </li>
+
+                    <li class="header__sort-item">
+                        <a href="" class="header__sort-list">Giá</a>
+                    </li>    
+
+                </ul>
             </header>
 
             <div class="app__container">
-                <div class="grid">
-                    <div class="grid__row app__content">
-                        <div class="grid__column-2">
+                <div class="grid wide">
+                    <div class="row sm-gutter app__content">
+                        <div class="col l-2 m-0 c-0">
                             <nav class="category">
                                 <h3 class="category__heading">
-                                    <i class="category__heading-icon fas fa-list"></i>
                                     Danh mục
                                 </h3>
             
@@ -266,8 +392,8 @@
                             </nav>
                         </div>
     
-                        <div class="grid__column-10">
-                            <div class="home-filter">
+                        <div class="col l-10 m-12 c-12">
+                            <div class="home-filter hide-on-mobile-tablet">
                                 <span class="home-filter__label">Sắp xếp theo</span>
                                 <button class="home-filter__btn btn">Phổ biến</button>  
                                 <button class="home-filter__btn btn btn--primary">Mới nhất</button>  
@@ -300,13 +426,708 @@
                                     </div>
                                 </div>
                             </div>
+
+                            <nav class="mobile-category">
+                                <ul class="mobile-category__list">
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+
+                                    <li class="mobile-category__item">
+                                        <a href="" class="mobile-category__link">Dụng cụ & thiết bị tiện ích</a>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <div class="home-product">
+                                <!-- Grid -> Row -> Column -->
+                                <div class="row sm-gutter">
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/212c91e778068d3537ab4b09df488d1a_tn);"></div>
+                                            <h4 class="home-product-item__name">Son Lì Nhẹ Môi Dưỡng Môi Maybelline New York Color Sensational The Creamy Mattes Lipstick 3.9g</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">1.200.000đ</span>
+                                                <span class="home-product-item__price-current">999.000đ</span>
+                                            </div>
+
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+
+                                                <span class="home-product-item__sold">88 đã bán</span>
+                                            </div>
+
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <spam class="home-product-item__origin-name">Korea</spam>
+                                            </div>
+
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-off">
+                                                <span class="home-product-item__sale-off-percent">10%</span>
+                                                <span class="home-product-item__sale-off-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/212c91e778068d3537ab4b09df488d1a_tn);"></div>
+                                            <h4 class="home-product-item__name">Son Lì Nhẹ Môi Dưỡng Môi Maybelline New York Color Sensational The Creamy Mattes Lipstick 3.9g</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">1.200.000đ</span>
+                                                <span class="home-product-item__price-current">999.000đ</span>
+                                            </div>
+
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+
+                                                <span class="home-product-item__sold">88 đã bán</span>
+                                            </div>
+
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <spam class="home-product-item__origin-name">Korea</spam>
+                                            </div>
+
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-off">
+                                                <span class="home-product-item__sale-off-percent">10%</span>
+                                                <span class="home-product-item__sale-off-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/212c91e778068d3537ab4b09df488d1a_tn);"></div>
+                                            <h4 class="home-product-item__name">Son Lì Nhẹ Môi Dưỡng Môi Maybelline New York Color Sensational The Creamy Mattes Lipstick 3.9g</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">1.200.000đ</span>
+                                                <span class="home-product-item__price-current">999.000đ</span>
+                                            </div>
+
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+
+                                                <span class="home-product-item__sold">88 đã bán</span>
+                                            </div>
+
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <spam class="home-product-item__origin-name">Korea</spam>
+                                            </div>
+
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-off">
+                                                <span class="home-product-item__sale-off-percent">10%</span>
+                                                <span class="home-product-item__sale-off-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/212c91e778068d3537ab4b09df488d1a_tn);"></div>
+                                            <h4 class="home-product-item__name">Son Lì Nhẹ Môi Dưỡng Môi Maybelline New York Color Sensational The Creamy Mattes Lipstick 3.9g</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">1.200.000đ</span>
+                                                <span class="home-product-item__price-current">999.000đ</span>
+                                            </div>
+
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+
+                                                <span class="home-product-item__sold">88 đã bán</span>
+                                            </div>
+
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <spam class="home-product-item__origin-name">Korea</spam>
+                                            </div>
+
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-off">
+                                                <span class="home-product-item__sale-off-percent">10%</span>
+                                                <span class="home-product-item__sale-off-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/212c91e778068d3537ab4b09df488d1a_tn);"></div>
+                                            <h4 class="home-product-item__name">Son Lì Nhẹ Môi Dưỡng Môi Maybelline New York Color Sensational The Creamy Mattes Lipstick 3.9g</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">1.200.000đ</span>
+                                                <span class="home-product-item__price-current">999.000đ</span>
+                                            </div>
+
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+
+                                                <span class="home-product-item__sold">88 đã bán</span>
+                                            </div>
+
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <spam class="home-product-item__origin-name">Korea</spam>
+                                            </div>
+
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-off">
+                                                <span class="home-product-item__sale-off-percent">10%</span>
+                                                <span class="home-product-item__sale-off-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/212c91e778068d3537ab4b09df488d1a_tn);"></div>
+                                            <h4 class="home-product-item__name">Son Lì Nhẹ Môi Dưỡng Môi Maybelline New York Color Sensational The Creamy Mattes Lipstick 3.9g</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">1.200.000đ</span>
+                                                <span class="home-product-item__price-current">999.000đ</span>
+                                            </div>
+
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+
+                                                <span class="home-product-item__sold">88 đã bán</span>
+                                            </div>
+
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <spam class="home-product-item__origin-name">Korea</spam>
+                                            </div>
+
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-off">
+                                                <span class="home-product-item__sale-off-percent">10%</span>
+                                                <span class="home-product-item__sale-off-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/212c91e778068d3537ab4b09df488d1a_tn);"></div>
+                                            <h4 class="home-product-item__name">Son Lì Nhẹ Môi Dưỡng Môi Maybelline New York Color Sensational The Creamy Mattes Lipstick 3.9g</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">1.200.000đ</span>
+                                                <span class="home-product-item__price-current">999.000đ</span>
+                                            </div>
+
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+
+                                                <span class="home-product-item__sold">88 đã bán</span>
+                                            </div>
+
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <spam class="home-product-item__origin-name">Korea</spam>
+                                            </div>
+
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-off">
+                                                <span class="home-product-item__sale-off-percent">10%</span>
+                                                <span class="home-product-item__sale-off-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/212c91e778068d3537ab4b09df488d1a_tn);"></div>
+                                            <h4 class="home-product-item__name">Son Lì Nhẹ Môi Dưỡng Môi Maybelline New York Color Sensational The Creamy Mattes Lipstick 3.9g</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">1.200.000đ</span>
+                                                <span class="home-product-item__price-current">999.000đ</span>
+                                            </div>
+
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+
+                                                <span class="home-product-item__sold">88 đã bán</span>
+                                            </div>
+
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <spam class="home-product-item__origin-name">Korea</spam>
+                                            </div>
+
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-off">
+                                                <span class="home-product-item__sale-off-percent">10%</span>
+                                                <span class="home-product-item__sale-off-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/212c91e778068d3537ab4b09df488d1a_tn);"></div>
+                                            <h4 class="home-product-item__name">Son Lì Nhẹ Môi Dưỡng Môi Maybelline New York Color Sensational The Creamy Mattes Lipstick 3.9g</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">1.200.000đ</span>
+                                                <span class="home-product-item__price-current">999.000đ</span>
+                                            </div>
+
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+
+                                                <span class="home-product-item__sold">88 đã bán</span>
+                                            </div>
+
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <spam class="home-product-item__origin-name">Korea</spam>
+                                            </div>
+
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-off">
+                                                <span class="home-product-item__sale-off-percent">10%</span>
+                                                <span class="home-product-item__sale-off-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="col l-2-4 m-4 c-6">
+                                        <a class="home-product-item" href="#">
+                                            <div class="home-product-item__img" style="background-image: url(https://cf.shopee.vn/file/212c91e778068d3537ab4b09df488d1a_tn);"></div>
+                                            <h4 class="home-product-item__name">Son Lì Nhẹ Môi Dưỡng Môi Maybelline New York Color Sensational The Creamy Mattes Lipstick 3.9g</h4>
+                                            <div class="home-product-item__price">
+                                                <span class="home-product-item__price-old">1.200.000đ</span>
+                                                <span class="home-product-item__price-current">999.000đ</span>
+                                            </div>
+
+                                            <div class="home-product-item__action">
+                                                <span class="home-product-item__like home-product-item__like--liked">
+                                                    <i class="home-product-item__like-icon-empty far fa-heart"></i>
+                                                    <i class="home-product-item__like-icon-fill fas fa-heart"></i>
+                                                </span>
+                                                <div class="home-product-item__rating">
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="home-product-item__rating-gold fas fa-star"></i>
+                                                    <i class="fas fa-star"></i>
+                                                </div>
+
+                                                <span class="home-product-item__sold">88 đã bán</span>
+                                            </div>
+
+                                            <div class="home-product-item__origin">
+                                                <span class="home-product-item__brand">Whoo</span>
+                                                <spam class="home-product-item__origin-name">Korea</spam>
+                                            </div>
+
+                                            <div class="home-product-item__favourite">
+                                                <i class="fas fa-check"></i>
+                                                <span>Yêu thích</span>
+                                            </div>
+                                            <div class="home-product-item__sale-off">
+                                                <span class="home-product-item__sale-off-percent">10%</span>
+                                                <span class="home-product-item__sale-off-label">GIẢM</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <ul class="pagination home-product__pagination">
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-item__link">
+                                        <i class="pagination-item__icon fas fa-angle-left"></i>
+                                    </a>
+                                </li>
+
+                                <li class="pagination-item pagination-item--active">
+                                    <a href="#" class="pagination-item__link">1</a>                                   </a>
+                                </li>
+
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-item__link">2</a>
+
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-item__link">3</a>                                   </a>
+                                </li>
+
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-item__link">4</a>                                   </a>
+                                </li>
+
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-item__link">5</a>                                   </a>
+                                </li>
+
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-item__link">...</a>                                   </a>
+                                </li>
+
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-item__link">14</a>                                   </a>
+                                </li>
+
+                                <li class="pagination-item">
+                                    <a href="#" class="pagination-item__link">
+                                        <i class="pagination-item__icon fas fa-angle-right"></i>
+                                    </a>
+                                </li>
+
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
 
             <footer class="footer">
+                <div class="grid wide footer__content">
+                    <div class="row">
+                        <div class="col l-2-4 m-4 c-6">
+                            <h3 class="footer__heading">CHĂM SÓC KHÁCH HÀNG</h3>  
+                            <ul class="footer-list">
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">Trung Tâm Trợ Giúp</a>
+                                </li>
 
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">Shopee Blog</a>
+                                </li>
+
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">Shopee Mall</a>
+                                </li>
+
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">Hướng Dẫn Mua Hàng</a>
+                                </li>
+
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">Hướng Dẫn Bán Hàng</a>
+                                </li>
+
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">Thanh Toán</a>
+                                </li>
+
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">Shopee Xu</a>
+                                </li>
+
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">Vận Chuyển</a>
+                                </li>
+
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">Trả Hàng & Hoàn Tiền</a>
+                                </li>
+
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">Chăm Sóc Khách Hàng</a>
+                                </li>
+                                
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">Chính Sách Bảo Hành</a>                                    
+                                </li>
+                            </ul>       
+                        </div>
+
+                        <div class="col l-2-4 m-4 c-6">
+                            <h3 class="footer__heading">VỀ SHOPEE</h3>         
+                            <ul class="footer-list">
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">Giới Thiệu Về Shopee Việt Nam</a>
+                                </li>
+
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">Tuyển Dụng</a>
+                                </li>
+
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">Điều Khoản Shopee</a>
+                                </li>
+
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">Chính Sách Bảo Mật</a>
+                                </li>
+
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">Chính Hãng</a>
+                                </li>
+
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">Kênh Người Bán</a>
+                                </li>
+
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">Flash Sales</a>
+                                </li>
+
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">Chương Trình Tiếp Thị Liên Kết Shopee</a>
+                                </li>
+
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">Liên Hệ Với Truyền Thông</a>                                                                        
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col l-2-4 m-4 c-6">
+                            <h3 class="footer__heading">THANH TOÁN</h3>         
+                            <ul class="footer-list footer-list-pay">
+                                <li class="footer-item">                                    
+                                    <a href="#" class="footer-item__link">
+                                        <i class="footer-item__icon-pay fab fa-cc-visa"></i>
+                                    </a>
+                                </li>
+
+                                <li class="footer-item">                                    
+                                    <a href="#" class="footer-item__link">
+                                        <i class="footer-item__icon-pay fab fa-cc-mastercard"></i>
+                                    </a>
+                                </li>
+
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">                                        
+                                        <i class="footer-item__icon-pay fab fa-cc-paypal"></i>
+                                    </a>                                                                                                           
+                                </li>
+
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">                                        
+                                        <i class="footer-item__icon-pay fab fa-cc-jcb"></i>
+                                    </a>                                                                                                           
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col l-2-4 m-4 c-6">
+                            <h3 class="footer__heading">THEO DÕI CHÚNG TÔI TRÊN</h3>         
+                            <ul class="footer-list">
+                                <li class="footer-item">                                    
+                                    <a href="#" class="footer-item__link">
+                                        <i class="footer-item__icon fab fa-facebook"></i>
+                                        Facebook
+                                    </a>
+                                </li>
+
+                                <li class="footer-item">                                    
+                                    <a href="#" class="footer-item__link">
+                                        <i class="footer-item__icon fab fa-instagram"></i>
+                                        Instagram
+                                    </a>
+                                </li>
+
+                                <li class="footer-item">
+                                    <a href="#" class="footer-item__link">                                        
+                                        <i class="footer-item__icon fab fa-linkedin"></i>
+                                        LinkedIn
+                                    </a>                                                                                                           
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col l-2-4 m-8 c-12">
+                            <h3 class="footer__heading footer__heading--center">TẢI ỨNG DỤNG SHOPEE NGAY THÔI</h3>         
+                            <div class="footer__download">
+                                <img src="/acesses/img/qr_code.png" alt="" class="footer__download-qr">
+                                <div class="footer__download-app">
+                                    <a href="#">
+                                        <img src="/acesses/img/ggplay.png" alt="" class="footer__download-app-img">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="/acesses/img/appstore.png" alt="" class="footer__download-app-img">
+                                    </a>
+
+                                    <a href="#">
+                                        <img src="/acesses/img/appgallery.png" alt="" class="footer__download-app-img">                                        
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>                    
+                </div>
+
+                <div class="footer__bottom">
+                    <div class="grid wide">
+                        <div class="row">
+                            <div class="footer-legal">
+                                <ul class="legel-list">
+                                    <li class="legel-list__item">
+                                        <a href="#" class="legal-list__item-link">CHÍNH SÁCH BẢO MẬT</a>
+                                    </li>
+                                    <li class="legel-list__item">
+                                        <a href="#" class="legal-list__item-link">QUY CHẾ HOẠT ĐỘNG</a>
+                                    </li>
+                                    <li class="legel-list__item">
+                                        <a href="#" class="legal-list__item-link">CHÍNH SÁCH VẬN CHUYỂN</a>    
+                                    </li>
+                                    <li class="legel-list__item">
+                                        <a href="#" class="legal-list__item-link">CHÍNH SÁCH TRẢ HÀNG VÀ HOÀN TIỀN</a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                            <div class="footer-coppy-right">
+                                <p class="footer-coppy-right__name">Công ty TNHH Shopee</p>
+                                <p class="footer-coppy-right__address">Địa chỉ: Tầng 28, Tòa nhà trung tâm Lotte Hà Nội, 54 Liễu Giai, phường Cống Vị, Quận Ba Đình, Hà Nội. Tổng đài hỗ trợ: 19001221 - Email: cskh@hotro.shopee.vn</p>
+                                <p class="footer-coppy-right__num">Mã số doanh nghiệp: 0106773786 do Sở Kế hoạch & Đầu tư TP Hà Nội cấp lần đầu ngày 10/02/2015</p>
+                                <p class="footer-coppy-right__shoppee">© 2015 - Bản quyền thuộc về Công ty TNHH Shopee</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
             </footer>
 
             <!-- Modal layout -->
